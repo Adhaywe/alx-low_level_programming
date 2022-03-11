@@ -13,9 +13,8 @@ int main(void)
 	{
 		while (( ch != 'e') && ( ch != 'q'))
 		{
-			putchar(c);
+			putchar(ch);
 		}
 	}
 	return (0);
 }
-
