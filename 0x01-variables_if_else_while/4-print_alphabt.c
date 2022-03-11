@@ -11,10 +11,10 @@ int main(void)
 
 	for ( ch = 'a' ; ch <= 'z' ; ch++)
 	{
-		while (( ch != e) && ( ch != q))
+		while (( ch != 'e') && ( ch != 'q'))
 		{
-			putchar();
+			putchar(ch);
 		}
 	}
 	return (0);
-}
+
