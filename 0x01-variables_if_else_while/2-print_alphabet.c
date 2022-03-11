@@ -12,7 +12,6 @@ int main(void)
 	{
 		putchar(ch);
 		putchar('\n');
-		getc(ch:wq);
 	}
 	return (0);
 }
