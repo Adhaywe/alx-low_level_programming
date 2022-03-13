@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
+/*
  * main - Entry point
- *
  * Return: ret 1 (Success)
  */
 int main(void)
