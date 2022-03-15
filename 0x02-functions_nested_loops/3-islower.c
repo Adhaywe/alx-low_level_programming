@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * islower - function that checks for lowercase character
- *
+ * _islower - function that checks for lowercase character
+ * c is a character receptor
  * Return: 1 if lowercase 0 otherwise
  */
 int _islower(int c)
