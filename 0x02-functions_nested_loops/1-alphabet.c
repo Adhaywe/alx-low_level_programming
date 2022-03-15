@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 
 /**
  * main - Entry point
@@ -13,11 +13,10 @@ int main(void)
 void print_alphabet(void)
 {
 	int ch;
-	char lowcase;
 	
 	for(ch = 'a'; ch <= 'z'; ch++)
 	{
-		lowcase = putchar(ch);
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
