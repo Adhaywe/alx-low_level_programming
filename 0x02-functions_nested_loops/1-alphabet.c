@@ -5,7 +5,7 @@
  * main - Entry point
  * Return: Always 0 (Success)
  **/
-/* A function that prints all the alphabets in lowercase*/
+/* A function that prints all the alphabets in lowercas*/
 void print_alphabet(void) 
 {
 	int ch;
