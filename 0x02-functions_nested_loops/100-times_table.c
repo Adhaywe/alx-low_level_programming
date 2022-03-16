@@ -6,7 +6,7 @@
  *
  * Return: Time table
  */
-void print_times_table(int n);
+void print_times_table(int n)
 {
 	int row, col, m;
 
@@ -35,7 +35,7 @@ void print_times_table(int n);
 					_putchar(' ');
 				}
 			}
-			_putchar('\n');
+			_putchar('\n')
 			else 
 			{
 				return (0);
