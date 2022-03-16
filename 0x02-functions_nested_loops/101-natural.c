@@ -12,7 +12,7 @@ int main(void)
 	int i = 1;
 	int total = 0;
 
-	while(i < 1024)
+	while (i < 1024)
 	{
 		if (i % 3 == 0)
 		{
