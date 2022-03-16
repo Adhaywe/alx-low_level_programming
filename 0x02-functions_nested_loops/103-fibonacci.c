@@ -2,14 +2,15 @@
 
 /**
  * main - Entry point
- * Description: Print the sum of even fibonacci numbers up to a fibonacci value  * not exceeding 4,000,000.
+ * Description: Print the sum of even fibonacci numbers up to 4 million
+ *
  * Return: 0
  */
 int main(void)
 {
 	int i = 1, j = 2, total = 0;
 	int k;
-	
+
 	while (j < 4000000)
 	{
 		if (j % 2 == 0)
