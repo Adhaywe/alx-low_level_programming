@@ -8,38 +8,43 @@
  */
 void print_times_table(int n)
 {
-	int row, col, m;
+	int x = 0, y, z;
 
-	if (n < 15)
+	if (n > 15 || n < 0)
+		return;
+	while (x <= n)
 	{
-		for (row = 0; row <= n; row++)
+		for (y = 0; y <= n; y++)
 		{
-			_putchar('0');
-			_putchar(',');
-			_putchar(' ');
-			for (col = 1; col <= n; col++)
+			z = x * y;
+			if (z > 99)
 			{
-				m = row * col;
-				if ((m / 10) > 0)
-				{
-					_putchar((n / 10) + '0');
-				}
-				else
-				{
-					_putchar(' ');
-				}
-				_putchar((n % 10) + '0');
-				if (col < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				_putchar(z / 100 + '0');
+				_putchar((z / 10 % 10) + '0');
+				_putchar(z % 10 + '0');
 			}
-			_putchar('\n');
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+			else
+				_putchar(z + '0');
+			if (y != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
 		}
-	}
-	else
-	{
-		_putchar(' ');
+		_putchar('\n');
+		x++;
 	}
 }
