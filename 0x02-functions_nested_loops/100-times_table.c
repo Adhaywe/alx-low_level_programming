@@ -10,17 +10,16 @@ void print_times_table(int n)
 {
 	int row, col, m;
 
-	for (row = 0; row <= n; row++)
+	if (n < 15)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		for (col = 1; col <= n; col++)
+		for (row = 0; row <= n; row++)
 		{
-			m = row * col;
-			
-			if (n < 15)
+			_putchar('0');
+			_putchar(',');
+			_putchar(' ');
+			for (col = 1; col <= n; col++)
 			{
+				m = row * col;
 				if ((m / 10) > 0)
 				{
 					_putchar((n / 10) + '0');
@@ -38,5 +37,9 @@ void print_times_table(int n)
 			}
 			_putchar('\n');
 		}
+	}
+	else
+	{
+		return (0);
 	}
 }
