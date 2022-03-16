@@ -20,22 +20,22 @@ void print_times_table(int n)
 			m = row * col;
 			if (n < 15)
 			{
-				if ((m/10) > 0)
+				if ((m / 10) > 0)
 				{
-					_putchar((n/10) + '0');
+					_putchar((n / 10) + '0');
 				}
 				else
 				{
 					_putchar(' ');
 				}
-				_putchar((n%10) + '0');
+				_putchar((n % 10) + '0');
 				if (col < 9)
 				{
 					_putchar(',');
 					_putchar(' ');
 				}
 			}
-			_putchar('\n')
+			_putchar('\n');
 			else 
 			{
 				return (0);
