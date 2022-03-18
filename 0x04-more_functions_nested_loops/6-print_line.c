@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * print_line - a function that draws a straight line in the terminal
- * @n: integer input
- * Return: a straight line in the terminal
+ * print_line - Print line.
+ * @n: Number of lines
+ *
+ * Return: There is no return value
  */
+
 void print_line(int n)
 {
-	int i = 0;
+	int i;
 
 	if (n > 0)
 	{
