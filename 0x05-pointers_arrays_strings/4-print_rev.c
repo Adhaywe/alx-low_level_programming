@@ -15,10 +15,10 @@ void print_rev(char *s)
 	while (*(s + i))
 	{
 		*(a + i) = *(s + i);
-		i++
+		i++;
 	}
 	i = i - 1;
-	while (i > = 0)
+	while (i >= 0)
 	{
 		*(s + i) = *(a + j);
 		j++;
