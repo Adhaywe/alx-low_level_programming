@@ -2,7 +2,7 @@
 
 /**
  * puts2 - Function that prints every other character of a string
- * @str: string 
+ * @str: string
  * Return: void
  */
 void puts2(char *str)
