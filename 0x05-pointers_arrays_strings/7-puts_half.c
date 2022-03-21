@@ -1,4 +1,4 @@
-#include "main.h"
+#include "man.h"
 /**
  * puts_half - print second half of str
  *
@@ -21,6 +21,3 @@ void puts_half(char *str)
 		_putchar(*(str + charsToPrint++));
 	_putchar('\n');
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
