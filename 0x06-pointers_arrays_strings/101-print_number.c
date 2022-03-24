@@ -3,7 +3,7 @@
 
 /**
 * print_number - convers a string to an int
-* @n: a pointer to a string guven by main
+* @n: a pointer to a string given by main
 *
 * Description: making our own atoi function
 * Return: void
