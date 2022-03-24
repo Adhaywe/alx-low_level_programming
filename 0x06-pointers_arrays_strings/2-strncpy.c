@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- * _strncpy - Function that copies a n byte of src to dest
+ * _strncpy - cpoies n bytes of src to the dest string
  * @dest: string to copy to
- * @src: string to be copied
- * @n: number of bytes to be copied
+ * @src: string being copied
+ * @n: largest number of bytes to copy
+ *
+ * Return: address of dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
