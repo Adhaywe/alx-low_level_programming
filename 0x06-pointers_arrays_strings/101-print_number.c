@@ -2,10 +2,9 @@
 #include <limits.h>
 
 /**
-* print_number - convers a string to an int
+* print_number - function that prints an int
 * @n: a pointer to a string given by main
-*
-* Description: making our own atoi function
+* 
 * Return: void
 */
 
