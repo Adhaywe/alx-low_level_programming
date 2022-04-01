@@ -1,38 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - adds positive numbers
- * @argc - number of command line arguments
- * @argv - array of those arguments
- * Return: 0 if successful, Error and 1 otherwise.
+ * @argc: argument count
+ * @argv: argument vector for values
+ *
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i;
+	int i, j, sum;
 
-	if (argc == 0)
+	sum = 0;
+
+	for (i = 1; i < argc ; i++)
 	{
-		_putchar(0);
-		_putchar('\n');
-	}
-	else
-	{
-		for (i = 0; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0' ; j++)
 		{
-			if ((argv[i] >= 'a') && (argv[i] <= 'z'))
+			if (argv[i][j] < 47 || argv[i][j] > 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
-			{
-				sum += atoi(argv[i]);
-			}
 		}
-		printf("%d\n", sum);
+		sum = sum + atoi(argv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
