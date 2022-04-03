@@ -2,6 +2,7 @@
 ***
 Project done during ALX Software Engineering studies. 
 ## Description
+*****
 - Why C programming is awesome (dont forget to tweet today, with the hashtag #cisfun :))
 - Who invented C
 - Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
