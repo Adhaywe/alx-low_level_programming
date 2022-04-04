@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	char *ptr;
 	int size;
 	int a;
-	
+
 	if (str == NULL)
 	{
 		return (NULL);
@@ -37,7 +37,7 @@ char *_strdup(char *str)
 	size = _strlen(str) + 1;
 	ptr = malloc(size * sizeof(char));
 	a = 0;
-	while(a < size)
+	while (a < size)
 	{
 		if (ptr == NULL)
 		{
