@@ -3,43 +3,48 @@
 #include <stdlib.h>
 
 /**
-* **strtow - function that splits a string into words.
-* @str : pointer
-*
-* Return: Char
-*/
+ * *argstostr - convert arguments on command line to strings
+ * @ac: int type
+ * @av: pointer to array
+ * Return: arguments as strings
+ */
 
-char **strtow(char *str)
+char *argstostr(int ac, char **av)
 {
-	char **d;
-	int i;
-	int j = 0;
-	int con = 0;
+	int size, count, count1, count2 = 0;
+	char *ptr;
 
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0 ; str[i] != '\0' ; i++)
+	if (ac == 0 || av == NULL)
 	{
-		if (str[i] != 32)
-			con++;
+		return (NULL);
 	}
 
-	d = malloc(sizeof(char) * con);
-
-	if (d == NULL)
-		return (NULL);
-
-	for (i = 0 ; str[i] != '\0' ; i++)
+	for (count = 0; count < ac; count++)
 	{
-		if (str[i] != 32)
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
 		{
-			*d[j] = str[i];
-			j++;
+			size += 1;
 		}
-		else
-		{
-		}
+		size += 1;
 	}
-	return (d);
+	size += 1;
+
+	ptr = malloc(sizeof(char) * size);
+	if (ptr == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	for (count = 0; count < ac; count++)
+	{
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		{
+			ptr[count2] = av[count][count1];
+			count2++;
+		}
+		ptr[count2] = '\n';
+		count2++;
+	}
+	ptr[count2] = '\0';
+	return (ptr);
 }
