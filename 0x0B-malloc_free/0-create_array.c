@@ -4,6 +4,10 @@
 
 /**
  * create_array - creates an arary of characters
+ * @size: unsigned int type
+ * @c: char type
+ *
+ * Return: return pointer to array
  */
 char *create_array(unsigned int size, char c)
 {
@@ -14,7 +18,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (0);
 	}
-	s = malloc(size * (sizeof(s)));
+	s = malloc(size * (sizeof(char)));
 	if (s == NULL)
 	{
 		return (NULL);
