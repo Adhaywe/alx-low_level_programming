@@ -48,7 +48,7 @@ char **strtow(char *str)
 	char **words, *found_word;
 
 	total_words = number(str);
-	words = malloc((total_words + 1) * sizeof(char *))
+	words = malloc((total_words + 1) * sizeof(char *));
 	if (str == 0 || *str == 0 || words == 0 || total_words == 0)
 		return (NULL);
 	words = malloc((total_words + 1) * sizeof(char *));
