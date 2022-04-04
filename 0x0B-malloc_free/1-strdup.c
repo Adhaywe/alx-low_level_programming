@@ -20,7 +20,7 @@ int _strlen(char *s)
 
 /**
  * _strdup - returns a pointer to a new string
- * @str - char type
+ * @str: char type
  *
  * Return: pointer
  */
