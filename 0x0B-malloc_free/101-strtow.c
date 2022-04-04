@@ -3,48 +3,85 @@
 #include <stdlib.h>
 
 /**
- * *argstostr - convert arguments on command line to strings
- * @ac: int type
- * @av: pointer to array
- * Return: arguments as strings
+ * number - function to calculate number of words
+ * @str: string being passed to check for words
+ *
+ * Return: number of words
  */
-
-char *argstostr(int ac, char **av)
+int number(char *str)
 {
-	int size, count, count1, count2 = 0;
-	char *ptr;
+	int a, num = 0;
 
-	if (ac == 0 || av == NULL)
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		return (NULL);
-	}
-
-	for (count = 0; count < ac; count++)
-	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		if (*str == ' ')
+			str++;
+		else
 		{
-			size += 1;
+			for (; str[a] != ' ' && str[a] != '\0'; a++)
+				str++;
+			num++;
 		}
-		size += 1;
 	}
-	size += 1;
+	return (num);
+}
+/**
+ * free_everything - frees the memory
+ * @string: pointer values being passed for freeing
+ * @i: counter
+ */
+void free_everything(char **string, int i)
+{
+	for (; i > 0;)
+		free(string[--i]);
+	free(string);
+}
 
-	ptr = malloc(sizeof(char) * size);
-	if (ptr == NULL)
-	{
-		free(ptr);
+/**
+ * strtow - function that splits string into words
+ * @str: string being passed
+ * Return: null if string is empty or null or function fails
+ */
+char **strtow(char *str)
+{
+	int total_words = 0, b = 0, c = 0, length = 0;
+	char **words, *found_word;
+
+	if (str == 0 || *str == 0)
 		return (NULL);
-	}
-	for (count = 0; count < ac; count++)
+	total_words = number(str);
+	if (total_words == 0)
+		return (NULL);
+	words = malloc((total_words + 1) * sizeof(char *));
+	if (words == 0)
+		return (NULL);
+	for (; *str != '\0' &&  b < total_words;)
 	{
-		for (count1 = 0; av[count][count1] != '\0'; count1++)
+		if (*str == ' ')
+			str++;
+		else
 		{
-			ptr[count2] = av[count][count1];
-			count2++;
+			found_word = str;
+			for (; *str != ' ' && *str != '\0';)
+			{
+				length++;
+				str++;
+			}
+			words[b] = malloc((length + 1) * sizeof(char));
+			if (words[b] == 0)
+			{
+				free_everything(words, b);
+				return (NULL);
+			}
+			while (*found_word != ' ' && *found_word != '\0')
+			{
+				words[b][c] = *found_word;
+				found_word++;
+				c++;
+			}
+			words[b][c] = '\0';
+			b++; c = 0; length = 0; str++;
 		}
-		ptr[count2] = '\n';
-		count2++;
 	}
-	ptr[count2] = '\0';
-	return (ptr);
+	return (words);
 }
