@@ -8,9 +8,9 @@
 char *create_array(unsigned int size, char c)
 {
 	char *s;
-	int i = 0;
+	unsigned int i = 0;
 
-	if (size == NULL)
+	if (size == 0)
 	{
 		return (0);
 	}
@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	}
 	while (i < size)
 	{
-		S[i] = c;
+		s[i] = c;
 		i++;
 	}
 	s[i] = '\0';
