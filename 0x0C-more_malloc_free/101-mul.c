@@ -10,7 +10,6 @@
  *
  * Return: product of argv[1] by argv[2]
  */
-
 int main(int argc, char *argv[])
 {
 	char *num1, *num2;
