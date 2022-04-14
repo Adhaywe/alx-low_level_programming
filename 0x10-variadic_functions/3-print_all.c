@@ -6,36 +6,36 @@
  * @c: arg pointing to the character to be printed
  *
  */
-void print_char(va_list c)
+void print_char(va_list arg)
 {
-	printf("%c", va_arg(c, int));
+	printf("%c", va_arg(arg, int));
 }
 /**
  * print_int - prints an int
  * @i: arg pointing to the integer to be printed
  *
  */
-void print_int(va_list i)
+void print_int(va_list arg)
 {
-	printf("%i", va_arg(i, int));
+	printf("%i", va_arg(arg, int));
 }
 /**
  * print_float - prints a float
  * @f: arg pointing to the float to be printed
  *
  */
-void print_float(va_list f)
+void print_float(va_list arg)
 {
-	printf("%f", va_arg(f, double));
+	printf("%f", va_arg(arg, double));
 }
 /**
  * print_string - prints a string
  * @s: arg pointing to the string to be pointed
  *
  */
-void print_string(va_list s)
+void print_string(va_list arg)
 {
-	char *str = va_arg(s, char *);
+	char *str = va_arg(arg, char *);
 	if (str)
 	{
 		printf("%s", str);
