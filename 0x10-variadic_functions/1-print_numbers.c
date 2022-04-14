@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - function that prints numbers
- * @separator - char type input
+ * @separator: char type input
  * @n: int type
  *
  * Return: Nothing
