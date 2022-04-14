@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				type[j].f(arg);
-				sp = ", ";
+				separator = ", ";
 				break;
 			}
 			j++;
