@@ -3,7 +3,7 @@
 /**
 * first - prints before the main.
 *
-* Return: Void.
+* Return: Void
 *
 */
 void __attribute__((constructor)) first()
