@@ -4,7 +4,6 @@
 * first - prints before the main.
 *
 * Return: Void
-*
 */
 void __attribute__((constructor)) first()
 {
