@@ -3,7 +3,7 @@
 
 /**
  * delete_nodeint_at_index - func that deletes the node at an index
- * of a listint_t linked list.
+ * of a listint_t linked list
  * @head: double pointer to the first node in the list
  * @index: index of the node to be deleted
  *
